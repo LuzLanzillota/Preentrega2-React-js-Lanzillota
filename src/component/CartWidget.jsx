@@ -1,8 +1,7 @@
-function CartWidget(props) {
-    const{img, alt}=props;
+function CartWidget() {
   return (
     <div className="cart">
-        <img src={img} alt={alt} /><p className="cart-text">0</p></div>
+      <img src="\public\images\carrito-de-compras1.png" alt="Imagen de carrito" /><p className="cart-text">1</p></div>
   )
 }
 

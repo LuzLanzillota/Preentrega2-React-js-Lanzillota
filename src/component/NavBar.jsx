@@ -1,58 +1,29 @@
-import React, { useState } from 'react';
+import { Link, NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar(props) {
-    const { img, alt ,img2,alt2} = props;
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
-
-    const enlaces = [
-        { link: "index", 
-            nombre: "Inicio" },
-        { 
-            link: "man", 
-            nombre: "Hombre"},
-        { link: "woman",
-        nombre: "Mujer" },
-        { link: "kids",
-            nombre: "Niños" },
-            { link: "accesories",
-                nombre: "Accesorios" }
-    ];
-
     return (
-        <header id="header">
+        <header>
             <div>
-                <a href="./index.html">
-                    <img src={img} alt={alt} style={{ height: '50px' }} />
-                </a>
-                <a href=""><img src={img2} alt={alt2} /></a>
+                <NavLink to="/">
+                    <img src="\public\images\Equa.png" alt="Logotipo de Equa" />
+                </NavLink>
             </div>
-            <div className="navbar">
-                <nav>
-                    <ul>
-                        {enlaces.map((enlace, index) => (
-                            <li 
-                                key={index} 
-                                onMouseEnter={enlace.subMenu ? toggleDropdown : null} 
-                                onMouseLeave={enlace.subMenu ? toggleDropdown : null}
-                            >
-                                <a href={`./${enlace.link}.html`}>{enlace.nombre}</a>
-                                {enlace.subMenu && dropdownOpen && (
-                                    <ul className="dropdown">
-                                        {enlace.subMenu.map((sub, idx) => (
-                                            <li key={idx}><a href={`#${sub.toLowerCase()}`}>{sub}</a></li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
-                </nav>
+            <nav class="navbar">
+                <ul>
+                    <li><NavLink to="/">Inicio</NavLink></li>
+                    <li><NavLink to="/category/man">Hombre</NavLink></li>
+                    <li><NavLink to="/category/woman">Mujer</NavLink></li>
+                    <li><NavLink to="/category/kids">Niños</NavLink></li>
+                    <li><NavLink to="/category/accesories">Accesorios</NavLink></li>
+                    <li><NavLink to="/item"></NavLink></li>
+                </ul>
+            </nav>
+            <div>
+                <img src="\public\images\usuario.png" alt="Imagen de usuario" class="right-img" />
             </div>
         </header>
+
     );
 }
 

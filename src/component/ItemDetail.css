@@ -1,0 +1,88 @@
+/* Contenedor principal que ocupa toda la pantalla */
+.detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* Ocupa toda la altura de la pantalla */
+    padding: 0 20px;
+    background-color: #fff;
+    /* Fondo blanco */
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+
+/* Contenedor del detalle del producto */
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    /* Ancho máximo del diseño */
+}
+
+/* Imagen del producto */
+.product-img {
+    width: 45%;
+    /* Ocupa el 50% del ancho */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Información del producto */
+.product-info {
+    flex: 1;
+    /* Ocupa el resto del espacio disponible */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+/* Título del producto */
+.product-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Precio del producto */
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+/* Descripción del producto */
+.product-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Contador */
+.product-count {
+    margin-top: auto;
+    /* Empuja el contador hacia abajo */
+}
+
+/* Botones del contador */
+.product-count button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.product-count button:hover {
+    background-color: #333;
+}

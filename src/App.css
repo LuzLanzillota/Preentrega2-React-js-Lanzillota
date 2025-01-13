@@ -23,6 +23,9 @@ h5 {
   font-family: 'Sora', sans-serif;
 }
 
+h1 {
+  font-size: 5em;
+}
 
 section {
   display: flex;
@@ -30,81 +33,6 @@ section {
   margin-top: 50px;
   justify-content: center;
   flex-wrap: wrap;
-
-}
-
-
-.card {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #3A39FF;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 250px;
-
-}
-
-.card img {
-  width: auto;
-  height: 200px;
-  object-fit: cover;
-}
-
-
-
-/* NavBar */
-/* Estilos existentes */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 20px;
-  background-color: #000000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-}
-
-.navbar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  margin-right: 100px;
-}
-
-.navbar li {
-  margin: 0 0.8rem;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #D4FF33;
-  font-size: 1.5rem;
-  transition: color 0.5s;
-}
-
-.navbar a:hover {
-  color: #FF5B23;
-  text-decoration: underline;
-}
-
-img {
-  height: 50px;
-}
-
-.right-img {
-  display: block;
-  position: absolute;
-  top: 3%;
-  left: 94%;
-  margin-left: auto;
-  max-width: 80px;
 
 }
 
@@ -146,10 +74,40 @@ img {
 
 .cart-text {
   position: absolute;
-  top: -6%;
+  top: 21%;
   left: 83%;
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-size: 1.2rem;
 
+}
+
+/* Estilos para el footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  /* Fondo negro */
+  color: #fff;
+  /* Texto blanco */
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para el texto */
+footer small {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Efecto hover para el texto */
+footer small:hover {
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
