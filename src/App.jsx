@@ -1,35 +1,41 @@
+import { startTransition } from "react";
 import './App.css'
 import ItemListContainer from './component/ItemListContainer'
 import NavBar from './component/NavBar'
 import CartWidget from './component/CartWidget'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './component/ItemDetailContainer'
+import { CartContextProvider } from "./context/cartContext";
+import CartContainer from "./component/CartContainer";
+
+
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
 
-      <NavBar />
-      <CartWidget />
+        <NavBar />
+        <Routes>
 
-      <Routes>
+          <Route path="/" element={<ItemListContainer greeting="Inicio" />} />
+          <Route path="/category/:catid" element={<ItemListContainer greeting="Compra por categoria" />} />
+          <Route path="/item" element={<div className="inicio-container"><h1>Detalle</h1></div>} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
 
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:catid" element={<ItemListContainer greeting="Compras por categoría" />} />
-        <Route path="/item" element={<div className="inicio-container"><h1>Detalle</h1></div>} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route
+            path="/"
+            element={<ItemListContainer />}
+          />
+          <Route path="/cart" element={<CartContainer />} />
+        </Routes>
 
-        <Route
-          path="/"
-          element={<ItemListContainer />}
-        />
-      </Routes>
-
-      <footer>
-        <small>Created by Equa 2025.</small>
-      </footer>
-    </BrowserRouter>
+        <footer>
+          <small>Created by Equa 2025.</small>
+        </footer>
+      </BrowserRouter>
+    </CartContextProvider>
 
   );
 }

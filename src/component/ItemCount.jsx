@@ -1,21 +1,29 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./ItemCount.css";
+import cartContext from "../context/cartContext";
+
 function ItemCount(props) {
     let [count, setCount] = useState(1);
+    const { addItem } = useContext(cartContext);
 
     const handleAdd = () => {
         if (count === props.max) return;
-        console.log("Suma");
         setCount(count + 1);
     };
 
     const handleSubstract = () => {
-        if (count === 1) return; // Evita que el contador baje de 0
-        console.log("Resta");
+        if (count === 1) return;
         setCount(count - 1);
     };
 
     function handleClick() {
+        addItem({
+            id: props.id,
+            price: props.price,
+            title: props.title,
+            count,
+            img: props.img
+        });
         props.onSubmitCount(count);
     }
 

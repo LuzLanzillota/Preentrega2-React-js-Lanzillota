@@ -6,6 +6,7 @@ const products = [
         stock: 10,
         img: `https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw37d70294/products/NIFN6957-400/NIFN6957-400-1.JPG`,
         category: 'man',
+        discount: 10, // 10% de descuento
         description: [
             "Las Nike Air Max 97 son conocidas por su diseño icónico inspirado en las ondas de agua. Su unidad Air de longitud completa proporciona una comodidad excepcional para corredores y amantes de la moda urbana.",
             "Ideales tanto para el deporte como para el uso diario, estas zapatillas ofrecen estilo y rendimiento en partes iguales."
@@ -30,6 +31,7 @@ const products = [
         stock: 3,
         img: `https://dcdn.mitiendanube.com/stores/003/145/899/products/f_0011_485995_01-jpg-gigapixel-standard-scale-6_00x1-e495e650cde7f8d03816861046809670-1024-1024.jpg`,
         category: 'woman',
+        freeShipping: true, // Envío gratis
         description: [
             "Las Balenciaga Triple S redefinieron la moda de las 'dad shoes' con su diseño audaz y voluminoso. Fabricadas con materiales premium, representan la alta moda.",
             "Estas zapatillas son ideales para quienes buscan destacar con un calzado innovador y atrevido."
@@ -53,7 +55,7 @@ const products = [
         price: 750,
         stock: 4,
         img: `https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1580402705/429446_02JP0_9064_001_100_0000_Light-Sneaker-Ace-bordada-para-hombre.jpg`,
-        category: 'accessories',
+        category: 'accesories',
         description: [
             "Las Gucci Ace Sneakers son un ícono de lujo, con detalles bordados y materiales de alta calidad que reflejan el estilo sofisticado de la marca.",
             "Perfectas para añadir un toque de elegancia a cualquier outfit casual."
@@ -66,6 +68,8 @@ const products = [
         stock: 15,
         img: `https://images.puma.net/images/369579/25/sv01/fnd/ARG/w/600/h/600/`,
         category: 'man',
+        discount: 15, // 15% de descuento
+        freeShipping: true, // Envío gratis
         description: [
             "Las Puma RS-X Reinvent combinan comodidad y estilo retro con un diseño inspirado en los años 80.",
             "Ideales para el running o como complemento en looks urbanos modernos."
@@ -102,6 +106,7 @@ const products = [
         stock: 5,
         img: `https://salomonstore.com.ar/cdn/shop/files/L41086600__1.jpg?v=1729772469&width=1024`,
         category: 'man',
+        discount: 5, // 5% de descuento
         description: [
             "Las Salomon XT-6 Advanced son la elección perfecta para aventuras al aire libre. Su diseño robusto ofrece tracción y estabilidad en terrenos difíciles.",
             "Creadas para excursionistas y amantes de los deportes de montaña que buscan rendimiento y durabilidad."
@@ -138,6 +143,7 @@ const products = [
         stock: 30,
         img: `https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dwf6fc032f/products/VAVN000D3HY28/VAVN000D3HY28-1.JPG`,
         category: 'kids',
+        freeShipping: true, // Envío gratis
         description: [
             "Las Vans Old Skool son un ícono del skateboarding, con su diseño clásico y suela vulcanizada para un mejor agarre.",
             "Ideales para skaters o como complemento en un outfit casual y urbano."
@@ -178,7 +184,84 @@ const products = [
             "Las Hoka One One Clifton 8 ofrecen una amortiguación excepcional y un diseño ligero, ideales para corredores de larga distancia.",
             "Diseñadas para maximizar el confort sin comprometer el rendimiento."
         ]
-    }
+    },
+    {
+        id: 16,
+        title: 'Nike Air Zoom Pegasus 39',
+        price: 120,
+        stock: 15,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxDo8fXfr4EXUPYwJ0xHJkA9TgJ0Cz6VUPgk4yJcQH-9s&s',
+        category: 'man',
+        description: [
+            "Las Nike Air Zoom Pegasus 39 están diseñadas para ofrecer una excelente respuesta y confort en cada paso.",
+            "Ideales para corredores que buscan velocidad y estabilidad."
+        ],
+        discount: 10,
+    },
+    {
+        id: 17,
+        title: 'Adidas Ultraboost 22',
+        price: 180,
+        stock: 8,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcpksl6T-MTz7bp9VQOnkdeEONXISe6To9HW4zqhlGXA&s',
+        category: 'man',
+        description: [
+            "Las Adidas Ultraboost 22 ofrecen una comodidad superior con la tecnología Boost para máxima energía.",
+            "Perfectas para quienes buscan una sensación de caminar sobre nubes."
+        ]
+    },
+    {
+        id: 18,
+        title: 'Puma Ignite Flash evoKNIT',
+        price: 110,
+        stock: 20,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJczrsNJofkdd7gfPM0xltI4Epgnyl1OrfqTq9fwI1ZQ&s',
+        category: 'man',
+        description: [
+            "Las Puma Ignite Flash evoKNIT ofrecen un diseño dinámico y una amortiguación excelente.",
+            "Con tecnología de punto evoKNIT para un ajuste perfecto."
+        ],
+        freeShipping: true
+    },
+    {
+        id: 19,
+        title: 'Asics Gel-Kayano 28',
+        price: 150,
+        stock: 12,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsTZfYFcqYvIjls-KhphnUxeIowEjhcdzn_qde5qMBtA&s',
+        category: 'man',
+        description: [
+            "Las Asics Gel-Kayano 28 están diseñadas para ofrecer soporte y estabilidad en cada paso.",
+            "Ideales para quienes necesitan un control superior durante las carreras."
+        ]
+    },
+    {
+        id: 20,
+        title: 'New Balance Fresh Foam 1080v11',
+        price: 140,
+        stock: 18,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVatPxDWKfSxdWVXQU0LtLGOw2xaEFt5D3YxRHZoFCOg&s',
+        category: 'man',
+        description: [
+            "Las New Balance Fresh Foam 1080v11 ofrecen una amortiguación fresca y ligera.",
+            "Perfectas para corredores que buscan un alto rendimiento y comodidad."
+        ],
+        discount: 15,
+    },
+    {
+        id: 21,
+        title: 'Reebok Floatride Energy 3.0',
+        price: 125,
+        stock: 10,
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvmDhqTn4NNgpl3k-QON0h7cU_2A7_WQ2W3yT9MmWa&s',
+        category: 'man',
+        description: [
+            "Las Reebok Floatride Energy 3.0 están diseñadas para ofrecer ligereza y durabilidad, con una excelente amortiguación.",
+            "Perfectas para quienes buscan una carrera eficiente y cómoda."
+        ],
+        freeShipping: true
+    },
+
 ];
 
 

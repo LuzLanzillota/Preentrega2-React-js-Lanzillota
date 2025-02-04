@@ -21,10 +21,12 @@ h4,
 h5 {
   font-size: 100%;
   font-family: 'Sora', sans-serif;
+  margin-top: 100px;
 }
 
 h1 {
   font-size: 5em;
+  margin-bottom: 150px;
 }
 
 section {
@@ -36,48 +38,19 @@ section {
 
 }
 
-.item-list-container {
-  background-color: #3A39FF;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 
-}
-
-.item-list-container h1 {
-  font-size: 2em;
-  color: #D4FF33;
-}
-
-.item-list-container p {
-  font-size: 1.2em;
-  color: #D4FF33;
-}
 
 .cart {
-  position: absolute;
-  right: 40px;
-  z-index: 1000;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.cart img {
-  width: auto;
-  height: 60px;
+  margin-right: 60px;
 }
 
 .cart-text {
   position: absolute;
-  top: 21%;
-  left: 83%;
+  top: 7%;
+  left: 96%;
   transform: translate(-50%, -50%);
   color: #ffffff;
+  font-weight: bolder;
   font-size: 1.2rem;
 
 }
@@ -88,10 +61,8 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: #000;
-  /* Fondo negro */
   color: #fff;
-  /* Texto blanco */
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;

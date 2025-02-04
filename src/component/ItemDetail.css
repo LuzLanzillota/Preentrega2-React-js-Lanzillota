@@ -12,7 +12,6 @@
     margin-bottom: 80px;
 }
 
-/* Contenedor del detalle del producto */
 .product-detail {
     display: flex;
     flex-direction: row;
@@ -25,8 +24,8 @@
 
 /* Imagen del producto */
 .product-img {
-    width: 45%;
-    /* Ocupa el 50% del ancho */
+    width: 40%;
+
     height: auto;
     object-fit: cover;
 }
@@ -34,7 +33,6 @@
 /* Información del producto */
 .product-info {
     flex: 1;
-    /* Ocupa el resto del espacio disponible */
     display: flex;
     flex-direction: column;
     gap: 15px;
