@@ -2,19 +2,16 @@ import { useState, useEffect } from "react";
 import products from "./data";
 
 function getAsyncData() {
-    console.log("Solicitando datos");
 
     const promiseData = new Promise((resolve, reject) => {
         const errorFatal = false;
 
         setTimeout(() => {
             if (errorFatal) reject("Algo salió mal!!!!");
-            console.log("Promesa Terminada");
+
             resolve(products);
         }, 2000);
     });
-
-    console.log("Promesa generada.");
 
     return promiseData;
 }
@@ -22,7 +19,6 @@ function getAsyncData() {
 export function useAsyncData() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-
     useEffect(() => {
         getAsyncData().then((result) => {
             setData(result);
@@ -37,8 +33,6 @@ export function useAsyncData() {
 }
 
 export function getAsyncItemById(itemID) {
-    console.log("Solicitando producto id....", itemID);
-
     const promiseData = new Promise((resolve) => {
         setTimeout(() => {
             const requestedProduct = products.find((item) => item.id === Number(itemID));
@@ -46,7 +40,7 @@ export function getAsyncItemById(itemID) {
         }, 2000);
     });
 
-    console.log("Promesa generada.");
+
 
     return promiseData;
 }
@@ -61,7 +55,6 @@ export function getAsyncItemsByCategory(catID) {
         }, 1000);
     });
 
-    console.log("Promesa generada.");
 
     return promiseData;
 }

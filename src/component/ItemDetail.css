@@ -4,10 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 80vh;
-    /* Ocupa toda la altura de la pantalla */
     padding: 0 20px;
     background-color: #fff;
-    /* Fondo blanco */
     box-sizing: border-box;
     margin-bottom: 80px;
 }
@@ -19,7 +17,6 @@
     gap: 40px;
     width: 100%;
     max-width: 1200px;
-    /* Ancho máximo del diseño */
 }
 
 /* Imagen del producto */
@@ -65,7 +62,6 @@
 /* Contador */
 .product-count {
     margin-top: auto;
-    /* Empuja el contador hacia abajo */
 }
 
 /* Botones del contador */
@@ -91,5 +87,4 @@
     font-size: 1.1rem;
     margin-bottom: 3px;
     display: inline;
-    /* Para que el precio y el descuento estén en línea */
 }

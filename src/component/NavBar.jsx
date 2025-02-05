@@ -16,7 +16,6 @@ function NavBar(props) {
                     <li><NavLink to="/category/man">Hombre</NavLink></li>
                     <li><NavLink to="/category/woman">Mujer</NavLink></li>
                     <li><NavLink to="/category/kids">Niños</NavLink></li>
-                    <li><NavLink to="/category/accesories">Accesorios</NavLink></li>
                     <li><NavLink to="/cart"></NavLink> </li>
                     <li><NavLink to="/item"></NavLink></li>
                 </ul>

@@ -2,7 +2,6 @@ import { startTransition } from "react";
 import './App.css'
 import ItemListContainer from './component/ItemListContainer'
 import NavBar from './component/NavBar'
-import CartWidget from './component/CartWidget'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ItemDetailContainer from './component/ItemDetailContainer'
 import { CartContextProvider } from "./context/cartContext";

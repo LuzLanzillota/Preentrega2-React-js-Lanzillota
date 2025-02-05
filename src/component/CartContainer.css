@@ -71,3 +71,86 @@
     border: 1px solid black;
     color: white;
 }
+
+
+
+.cart-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.cart-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.cart-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.cart-form button {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-form button:hover {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid black;
+}
+
+.cart-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.c-total {
+    margin-top: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 1000px;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.clear-cart {
+    margin-top: 10px;
+}
+
+.clear-cart:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.realizada {
+    margin-top: 20px;
+    font-weight: bolder;
+}

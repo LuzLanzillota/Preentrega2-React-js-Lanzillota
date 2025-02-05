@@ -54,6 +54,7 @@ export function CartContextProvider(props) {
                 addItem,
                 removeItem,
                 getTotalPrice,
+                clearCart,
             }}
         >
             {props.children}

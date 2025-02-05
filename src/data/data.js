@@ -16,7 +16,7 @@ const products = [
         id: 2,
         title: 'Adidas Yeezy Boost 350',
         price: 220,
-        stock: 5,
+        stock: 0,
         img: `https://www.moov.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw86066842/products/ADHQ7045/ADHQ7045-1.JPG`,
         category: 'man',
         description: [
@@ -55,7 +55,7 @@ const products = [
         price: 750,
         stock: 4,
         img: `https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1580402705/429446_02JP0_9064_001_100_0000_Light-Sneaker-Ace-bordada-para-hombre.jpg`,
-        category: 'accesories',
+        category: 'woman',
         description: [
             "Las Gucci Ace Sneakers son un ícono de lujo, con detalles bordados y materiales de alta calidad que reflejan el estilo sofisticado de la marca.",
             "Perfectas para añadir un toque de elegancia a cualquier outfit casual."
@@ -65,7 +65,7 @@ const products = [
         id: 6,
         title: 'Puma RS-X Reinvent',
         price: 120,
-        stock: 0,
+        stock: 10,
         img: `https://images.puma.net/images/369579/25/sv01/fnd/ARG/w/600/h/600/`,
         category: 'man',
         discount: 15, // 15% de descuento
@@ -190,7 +190,7 @@ const products = [
         title: 'Nike Air Zoom Pegasus 39',
         price: 120,
         stock: 15,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxDo8fXfr4EXUPYwJ0xHJkA9TgJ0Cz6VUPgk4yJcQH-9s&s',
+        img: 'https://nikearprod.vtexassets.com/arquivos/ids/406910-1200-1200?width=1200&height=1200&aspect=true',
         category: 'man',
         description: [
             "Las Nike Air Zoom Pegasus 39 están diseñadas para ofrecer una excelente respuesta y confort en cada paso.",
@@ -203,7 +203,7 @@ const products = [
         title: 'Adidas Ultraboost 22',
         price: 180,
         stock: 8,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcpksl6T-MTz7bp9VQOnkdeEONXISe6To9HW4zqhlGXA&s',
+        img: 'https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/798d3061f5934cd1983bade800a7f2dd_9366/ZAPATILLAS_ULTRABOOST_22_Blanco_GX5595_01_standard.jpg',
         category: 'man',
         description: [
             "Las Adidas Ultraboost 22 ofrecen una comodidad superior con la tecnología Boost para máxima energía.",
@@ -215,7 +215,7 @@ const products = [
         title: 'Puma Ignite Flash evoKNIT',
         price: 110,
         stock: 20,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJczrsNJofkdd7gfPM0xltI4Epgnyl1OrfqTq9fwI1ZQ&s',
+        img: 'https://static.runnea.com/images/201812/puma-ignite-flash-evoknit-caracteristicas-4-840xXx80.jpg?0',
         category: 'man',
         description: [
             "Las Puma Ignite Flash evoKNIT ofrecen un diseño dinámico y una amortiguación excelente.",
@@ -228,7 +228,7 @@ const products = [
         title: 'Asics Gel-Kayano 28',
         price: 150,
         stock: 12,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsTZfYFcqYvIjls-KhphnUxeIowEjhcdzn_qde5qMBtA&s',
+        img: 'https://actitudsports.com.ar/wp-content/uploads/2022/11/kayano1-600x600.jpg',
         category: 'man',
         description: [
             "Las Asics Gel-Kayano 28 están diseñadas para ofrecer soporte y estabilidad en cada paso.",
@@ -240,7 +240,7 @@ const products = [
         title: 'New Balance Fresh Foam 1080v11',
         price: 140,
         stock: 18,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVatPxDWKfSxdWVXQU0LtLGOw2xaEFt5D3YxRHZoFCOg&s',
+        img: 'https://www.sumitate.com.ar/img/articulos/2023/06/zapatillas_de_running_new_balance_1080v12_fresh_foam_mujer_imagen1.jpg',
         category: 'man',
         description: [
             "Las New Balance Fresh Foam 1080v11 ofrecen una amortiguación fresca y ligera.",
@@ -248,24 +248,5 @@ const products = [
         ],
         discount: 15,
     },
-    {
-        id: 21,
-        title: 'Reebok Floatride Energy 3.0',
-        price: 125,
-        stock: 10,
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvmDhqTn4NNgpl3k-QON0h7cU_2A7_WQ2W3yT9MmWa&s',
-        category: 'man',
-        description: [
-            "Las Reebok Floatride Energy 3.0 están diseñadas para ofrecer ligereza y durabilidad, con una excelente amortiguación.",
-            "Perfectas para quienes buscan una carrera eficiente y cómoda."
-        ],
-        freeShipping: true
-    },
-
 ];
-
-
-
-
-
 export default products;
