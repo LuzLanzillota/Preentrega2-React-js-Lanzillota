@@ -1,15 +1,23 @@
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { useContext, useState } from "react";
 import cartContext from "../context/cartContext";
-import "./ItemDetail.css"
+import "./ItemDetail.css";
 
 function ItemDetail(props) {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
-    const { price, title, description, img, stock, id } = props;
+    const { price, title, description, img, stock, id, discount } = props;
+
     const { addItem } = useContext(cartContext);
+
     function onSubmitCount(count) {
-        addItem({ id, price, title, count, img });
+        if (discount > 0) {
+            const discountedPrice = price - (price * discount / 100);
+            addItem({ id, price: discountedPrice, title, count, img });
+        } else {
+            addItem({ id, price, title, count, img });
+        }
         setIsAddedToCart(true);
     }
 
@@ -20,11 +28,23 @@ function ItemDetail(props) {
                     <img src={img} alt="product img" className="product-img" />
                     <div className="product-info">
                         <h3 className="product-title">{title}</h3>
-                        <p className="product-price">$ {price}</p>
+                        <p className="product-price">
+                            {discount > 0 ? (
+                                <>
+                                    <span className="old-price">$ {price}</span>
+                                    <span className="discounted-price">$ {price - (price * discount / 100)}</span>
+                                </>
+                            ) : (
+                                `$ ${price}`
+                            )}
+                        </p>
+
                         <p className="product-description">{description}</p>
                         <div className="product-count">
                             {isAddedToCart ? (
-                                <button>Ver Carrito</button>
+                                <Link to="/cart">
+                                    <button>Ver Carrito</button>
+                                </Link>
                             ) : (
                                 <ItemCount onSubmitCount={onSubmitCount} max={stock} />
                             )}
@@ -37,3 +57,4 @@ function ItemDetail(props) {
 }
 
 export default ItemDetail;
+

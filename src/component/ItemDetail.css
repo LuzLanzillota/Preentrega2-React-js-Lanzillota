@@ -84,3 +84,12 @@
 .product-count button:hover {
     background-color: #333;
 }
+
+.old-price {
+    text-decoration: line-through;
+    color: rgb(127, 127, 127);
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    display: inline;
+    /* Para que el precio y el descuento estén en línea */
+}

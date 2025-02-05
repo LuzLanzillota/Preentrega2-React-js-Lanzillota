@@ -65,7 +65,7 @@ const products = [
         id: 6,
         title: 'Puma RS-X Reinvent',
         price: 120,
-        stock: 15,
+        stock: 0,
         img: `https://images.puma.net/images/369579/25/sv01/fnd/ARG/w/600/h/600/`,
         category: 'man',
         discount: 15, // 15% de descuento
