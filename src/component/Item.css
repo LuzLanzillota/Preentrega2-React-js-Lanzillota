@@ -88,7 +88,6 @@
     font-size: 1.1rem;
     margin-bottom: 3px;
     display: inline;
-    /* Para que el precio y el descuento estén en línea */
 }
 
 .card-price {
@@ -96,12 +95,10 @@
     font-weight: bold;
     margin-top: 5px;
     color: black;
-    /* Precio sin descuento será negro */
 }
 
 .discounted-price {
     color: rgb(0, 0, 0);
-    /* Precio con descuento será verde */
 }
 
 .discount-message {

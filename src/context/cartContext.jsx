@@ -6,44 +6,23 @@ export function CartContextProvider(props) {
     const [cartItems, setCartItems] = useState([]);
 
     function getTotalPrice() {
-        let totalPrice = 0;
-
-        cartItems.forEach((item) => {
-            totalPrice += item.count * item.price;
-        });
-
-        return totalPrice;
+        return cartItems.reduce((total, item) => total + item.count * item.price, 0);
     }
 
     function removeItem(id) {
-        const newCartState = cartItems.filter((item) => item.id !== id);
-        setCartItems(newCartState);
+        setCartItems(cartItems.filter((item) => item.id !== id));
     }
 
     function addItem({ price, id, title, img, count }) {
-        const copyCartItems = [...cartItems];
-
-        copyCartItems.push({
-            id: id,
-            title: title,
-            img: img,
-            count: count,
-            price: price,
-        });
-
-
         setCartItems([...cartItems, { id, title, img, count, price }]);
-    }
-    function clearCart() {
-        setCartItems([]);
     }
 
     function countItemsInCart() {
-        let total = 0;
-        cartItems.forEach((item) => {
-            total += item.count;
-        });
-        return total;
+        return cartItems.reduce((total, item) => total + item.count, 0);
+    }
+
+    function clearCart() {
+        setCartItems([]); // ✅ Ahora sí se vacía el carrito
     }
 
     return (
@@ -54,7 +33,8 @@ export function CartContextProvider(props) {
                 addItem,
                 removeItem,
                 getTotalPrice,
-                clearCart,
+                clearCart, // ✅ Añadida la función clearCart al contexto
+                setCartItems, // ✅ Se expone para que pueda ser usada en CartContainer
             }}
         >
             {props.children}

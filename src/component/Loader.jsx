@@ -6,21 +6,21 @@ function Loader() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh', // Altura del contenedor para ocupar toda la pantalla
-        width: '100vw', // Ancho del contenedor para ocupar toda la pantalla
-        position: 'fixed', // Asegura que el loader esté siempre visible en el viewport
-        top: 0, // Alineado al inicio de la pantalla
+        height: '100vh', 
+        width: '100vw', 
+        position: 'fixed', 
+        top: 0, 
         left: 0,
-        zIndex: 9999, // Asegúrate de que esté por encima de otros elementos
+        zIndex: 9999, 
     };
 
     return (
         <div style={loaderStyle}>
             <SpinnerDotted
-                size={72} // Tamaño del spinner
-                thickness={148} // Grosor del spinner
-                speed={100} // Velocidad del giro
-                color="#000000" // Color del spinner
+                size={72} 
+                thickness={148}
+                speed={100} 
+                color="#000000" 
             />
         </div>
     );
