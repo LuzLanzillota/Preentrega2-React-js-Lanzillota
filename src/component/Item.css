@@ -1,16 +1,17 @@
 .card {
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 10px;
+    border: 2px solid #000000;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+
     min-width: 300px;
     max-width: 300px;
     max-height: 500px;
@@ -102,14 +103,14 @@
 }
 
 .discount-message {
-    color: green;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     display: block;
     margin-top: 5px;
 }
 
 .free-shipping-message {
-    color: green;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     display: block;
 }
